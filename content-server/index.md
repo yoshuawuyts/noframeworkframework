@@ -7,6 +7,7 @@ with other systems, or writing scripts that do one thing well.
 - [Creating a server](#creating-a-server)
 - [Req Res](#req-res)
 - [Listen](#listen)
+- [browserify-server](#browserify-server)
 
 ## Creating a server
 Creating a server in Node goes as follows:
@@ -82,6 +83,9 @@ important ones are:
 - __.statusCode(code)__: set the http statusCode
 - __.statusMessage(message)__: set the http status message
 - __.writeHeader(header, value)__: set a header
+- __.write(data)__: write a string or buffer to the response
+- __.end(data)__: send the response off. All operations on `res` after this
+  will throw an error.
 
 ## Listen
 Once a server is created, all it needs to do is listen to a port. To do that
@@ -90,3 +94,15 @@ there's the `.listen()` method which takes two arguments:
   port will be selected.
 - __callback__: an empty callback that will be called when the server starts
   listening. The value of `this` points to the server.
+
+## browserify-server
+```js
+const browserify = require('browserify')
+const http = require('http')
+
+const server = http.createServer(function (req, res) {
+  const b = browserify('./index.js')
+  b.bundle().pipe(res)
+})
+server.listen(1337)
+```
