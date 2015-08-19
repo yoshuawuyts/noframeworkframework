@@ -31,9 +31,20 @@ inevitable that separate versions of the framework will be run in parallel or
 never upgraded at all. One of the observable symptomes of this in larger
 systems is the tendency to rewrite from scratch rather than refactor.
 
+Though modularity is no silver bullet, it sure helps in dealing with large
+systems. To paraphrase a famous quote:
+> The trick to writing large systems is to not write large systems but instead
+> write small systems that work together.
+
 ## This sounds reasonable. How do I get started?
 This guide is here to get you up to speed in coding without frameworks in
-JavaScript.
+JavaScript. It's recommended to start either on the
+[server](content-server/index.md) or [client](content-client/index.md). Happy
+coding!
+
+## See Also
+- [http-framework](https://github.com/raynos/http-framework)
+- [yoshuawuyts/knowledge/modules](https://github.com/yoshuawuyts/knowledge/modules)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
