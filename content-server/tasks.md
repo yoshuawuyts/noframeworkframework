@@ -105,7 +105,7 @@ __./package.json__
     "build:cname": "cp CNAME ./dist/CNAME",
     "build:html": "cp index.html ./dist/index.html",
     "clean": "rm -rf dist",
-    "postversion": "npm run build && gh-pages -d ./dist -b gh-pages,
+    "postversion": "npm run build && gh-pages -d ./dist -b gh-pages",
     "preversion": "npm run clean",
   },
   "devDependencies": {
