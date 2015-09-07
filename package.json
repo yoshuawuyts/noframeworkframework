@@ -1,0 +1,31 @@
+{
+  "name": "noframeworkframework",
+  "description": "no framework framework",
+  "private": true,
+  "scripts": {
+    "clean": "rm-modules",
+    "dev": "linklocal link -r && linklocal list -r | bulk -c 'npm install --production'",
+    "start": "node .",
+    "prepublish": "if [ \"$NODE_ENV\" != \"production\" ]; then npm run dev; fi",
+    "start:watch": "nodemon -i 'node_modules/' -i 'client*' -i 'component*' -- ./index.js | garnish",
+    "watch": "npm run start:watch"
+  },
+  "repository": "yoshuawuyts/noframeworkframework",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "client-main": "file:client-main",
+    "hyperstream": "^1.2.2",
+    "simple-html-index": "git+https://github.com/mattdesl/simple-html-index.git",
+    "watchify": "^3.4.0",
+    "watchify-request": "^2.0.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "bulk": "^2.0.0",
+    "garnish": "^3.0.0",
+    "linklocal": "^2.5.2",
+    "nodemon": "^1.4.1",
+    "rm-modules": "^1.0.2"
+  }
+}

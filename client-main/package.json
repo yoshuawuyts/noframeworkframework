@@ -1,0 +1,10 @@
+{
+  "name": "client-main",
+  "private": true,
+  "browserify": {
+    "transform": [ "babelify" ]
+  },
+  "dependencies": {
+    "css-wipe": "^4.0.0"
+  }
+}
