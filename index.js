@@ -29,14 +29,11 @@ router.on('/', {
       css: 'static/bundle.css'
     })
 
-    const hs = hyperstream({
-      'body': {
-        _appendHtml: `
-          <script src="//use.typekit.net/ohj8vea.js"></script>
-          <script>try{Typekit.load({ async: true });}catch(e){}</script>
-        `
-      }
-    })
+    const tag = `
+      <script src="//use.typekit.net/ohj8vea.js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    `
+    const hs = hyperstream({ body: { _appendHtml: tag } })
 
     htmls.pipe(hs).pipe(res)
   }

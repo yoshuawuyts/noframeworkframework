@@ -15,10 +15,15 @@
   "dependencies": {
     "browserify": "^11.0.1",
     "client-main": "file:client-main",
+    "http-ndjson": "^1.1.0",
     "hyperstream": "^1.2.2",
-    "simple-html-index": "git+https://github.com/mattdesl/simple-html-index.git",
+    "pathname-match": "^1.1.0",
+    "server-summary": "^3.2.0",
+    "simple-html-index": "^1.1.0",
     "watchify": "^3.4.0",
-    "watchify-request": "^2.0.0"
+    "watchify-request": "^2.0.0",
+    "wayfarer": "^5.0.1",
+    "wayfarer-to-server": "^2.0.2"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
