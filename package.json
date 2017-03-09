@@ -13,7 +13,7 @@
   "repository": "yoshuawuyts/noframeworkframework",
   "license": "MIT",
   "dependencies": {
-    "browserify": "^11.0.1",
+    "browserify": "^12.0.0",
     "client-main": "file:client-main",
     "http-ndjson": "^1.1.0",
     "hyperstream": "^1.2.2",
